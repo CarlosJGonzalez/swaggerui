@@ -28,7 +28,6 @@ export default {
     data: function(){
         return{
             defaultMultiple: false,
-            
         }
     },
     props:{
@@ -37,6 +36,7 @@ export default {
         title: String,
         value: Number,
         clearable: Boolean,
+        
     },
     created(){
 
@@ -46,8 +46,6 @@ export default {
         loadSelection : function(value){           
             if( value ){
                 this.$emit('codeSelected', { id: value.viewId, label: value.viewName });
-            }else{
-                this.$emit('codeSelected', null );
             }
         },
 

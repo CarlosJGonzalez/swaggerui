@@ -8,7 +8,7 @@
                 v-on:codeSelected="loadAccount"
                 :isMultiple=false
                 :parentData="accounts"
-                title="Select an account"
+                title="Select an Account"
                 v-model="viewId"
                 :clearable="true"
               />
