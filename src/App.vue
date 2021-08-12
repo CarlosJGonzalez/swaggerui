@@ -77,6 +77,7 @@ export default {
       }else{
         this.viewId = null;
         this.viewName = null;
+        this.disabled=true;
       }
     }
   },
