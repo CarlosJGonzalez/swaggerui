@@ -46,6 +46,8 @@ export default {
         loadSelection : function(value){           
             if( value ){
                 this.$emit('codeSelected', { id: value.viewId, label: value.viewName });
+            }else{
+                this.$emit( 'codeSelected', null );
             }
         },
 
