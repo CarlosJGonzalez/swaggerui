@@ -11,7 +11,6 @@
                 title="Select an account"
                 v-model="viewId"
                 :clearable="true"
-
               />
               <span>{{ viewName }}</span>
           </div>
