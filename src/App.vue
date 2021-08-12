@@ -8,8 +8,9 @@
                 v-on:codeSelected="loadAccount"
                 :isMultiple=false
                 :parentData="accounts"
-                title="Google Accounts"
-                v-model="selectedAccount"
+                title="Select an Account"
+                v-model="viewId"
+                :clearable="true"
               />
               <span>{{ viewName }}</span>
           </div>
@@ -45,7 +46,6 @@ export default {
   data: function(){
     return{
       accounts:[],
-      selectedAccount: 0,
       options:[],
       disabled: true,
       viewName: null,
@@ -74,6 +74,9 @@ export default {
         this.$store.dispatch( 'loadOptions', {
           id: this.viewId
         });
+      }else{
+        this.viewId = null;
+        this.viewName = null;
       }
     }
   },

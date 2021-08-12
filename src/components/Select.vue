@@ -7,8 +7,7 @@
                 @input="loadSelection"
                 :multiple="defaultMultiple"
                 :placeholder="title"
-                :clearable=true
-                :value=value
+                :clearable="clearable"
             />
         </div>
         
@@ -34,7 +33,9 @@ export default {
         isMultiple: Boolean,
         parentData: Array,
         title: String,
-        value: Number
+        value: Number,
+        clearable: Boolean,
+        
     },
     created(){
 
